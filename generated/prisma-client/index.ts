@@ -223,6 +223,8 @@ export type WechatOfficalAccountOrderByInput =
   | "deletedAt_ASC"
   | "deletedAt_DESC";
 
+export type MutationType = "CREATED" | "UPDATED" | "DELETED";
+
 export type WechatUserOrderByInput =
   | "id_ASC"
   | "id_DESC"
@@ -249,191 +251,12 @@ export type WechatUserOrderByInput =
   | "deletedAt_ASC"
   | "deletedAt_DESC";
 
-export type MutationType = "CREATED" | "UPDATED" | "DELETED";
-
-export type SurveyRecordWhereUniqueInput = AtLeastOne<{
-  id: ID_Input;
-}>;
-
-export interface SurveyRecordWhereInput {
-  id?: ID_Input;
-  id_not?: ID_Input;
-  id_in?: ID_Input[] | ID_Input;
-  id_not_in?: ID_Input[] | ID_Input;
-  id_lt?: ID_Input;
-  id_lte?: ID_Input;
-  id_gt?: ID_Input;
-  id_gte?: ID_Input;
-  id_contains?: ID_Input;
-  id_not_contains?: ID_Input;
-  id_starts_with?: ID_Input;
-  id_not_starts_with?: ID_Input;
-  id_ends_with?: ID_Input;
-  id_not_ends_with?: ID_Input;
-  htmlId?: String;
-  htmlId_not?: String;
-  htmlId_in?: String[] | String;
-  htmlId_not_in?: String[] | String;
-  htmlId_lt?: String;
-  htmlId_lte?: String;
-  htmlId_gt?: String;
-  htmlId_gte?: String;
-  htmlId_contains?: String;
-  htmlId_not_contains?: String;
-  htmlId_starts_with?: String;
-  htmlId_not_starts_with?: String;
-  htmlId_ends_with?: String;
-  htmlId_not_ends_with?: String;
-  openid?: String;
-  openid_not?: String;
-  openid_in?: String[] | String;
-  openid_not_in?: String[] | String;
-  openid_lt?: String;
-  openid_lte?: String;
-  openid_gt?: String;
-  openid_gte?: String;
-  openid_contains?: String;
-  openid_not_contains?: String;
-  openid_starts_with?: String;
-  openid_not_starts_with?: String;
-  openid_ends_with?: String;
-  openid_not_ends_with?: String;
-  createdAt?: DateTimeInput;
-  createdAt_not?: DateTimeInput;
-  createdAt_in?: DateTimeInput[] | DateTimeInput;
-  createdAt_not_in?: DateTimeInput[] | DateTimeInput;
-  createdAt_lt?: DateTimeInput;
-  createdAt_lte?: DateTimeInput;
-  createdAt_gt?: DateTimeInput;
-  createdAt_gte?: DateTimeInput;
-  updatedAt?: DateTimeInput;
-  updatedAt_not?: DateTimeInput;
-  updatedAt_in?: DateTimeInput[] | DateTimeInput;
-  updatedAt_not_in?: DateTimeInput[] | DateTimeInput;
-  updatedAt_lt?: DateTimeInput;
-  updatedAt_lte?: DateTimeInput;
-  updatedAt_gt?: DateTimeInput;
-  updatedAt_gte?: DateTimeInput;
-  deletedAt?: String;
-  deletedAt_not?: String;
-  deletedAt_in?: String[] | String;
-  deletedAt_not_in?: String[] | String;
-  deletedAt_lt?: String;
-  deletedAt_lte?: String;
-  deletedAt_gt?: String;
-  deletedAt_gte?: String;
-  deletedAt_contains?: String;
-  deletedAt_not_contains?: String;
-  deletedAt_starts_with?: String;
-  deletedAt_not_starts_with?: String;
-  deletedAt_ends_with?: String;
-  deletedAt_not_ends_with?: String;
-  AND?: SurveyRecordWhereInput[] | SurveyRecordWhereInput;
-  OR?: SurveyRecordWhereInput[] | SurveyRecordWhereInput;
-  NOT?: SurveyRecordWhereInput[] | SurveyRecordWhereInput;
-}
-
-export type WechatOfficalAccountWhereUniqueInput = AtLeastOne<{
-  id: ID_Input;
+export interface WechatOfficalAccountUpdateInput {
   appId?: String;
-}>;
-
-export interface WechatOfficalAccountWhereInput {
-  id?: ID_Input;
-  id_not?: ID_Input;
-  id_in?: ID_Input[] | ID_Input;
-  id_not_in?: ID_Input[] | ID_Input;
-  id_lt?: ID_Input;
-  id_lte?: ID_Input;
-  id_gt?: ID_Input;
-  id_gte?: ID_Input;
-  id_contains?: ID_Input;
-  id_not_contains?: ID_Input;
-  id_starts_with?: ID_Input;
-  id_not_starts_with?: ID_Input;
-  id_ends_with?: ID_Input;
-  id_not_ends_with?: ID_Input;
-  appId?: String;
-  appId_not?: String;
-  appId_in?: String[] | String;
-  appId_not_in?: String[] | String;
-  appId_lt?: String;
-  appId_lte?: String;
-  appId_gt?: String;
-  appId_gte?: String;
-  appId_contains?: String;
-  appId_not_contains?: String;
-  appId_starts_with?: String;
-  appId_not_starts_with?: String;
-  appId_ends_with?: String;
-  appId_not_ends_with?: String;
   token?: String;
-  token_not?: String;
-  token_in?: String[] | String;
-  token_not_in?: String[] | String;
-  token_lt?: String;
-  token_lte?: String;
-  token_gt?: String;
-  token_gte?: String;
-  token_contains?: String;
-  token_not_contains?: String;
-  token_starts_with?: String;
-  token_not_starts_with?: String;
-  token_ends_with?: String;
-  token_not_ends_with?: String;
   jsApiTicket?: String;
-  jsApiTicket_not?: String;
-  jsApiTicket_in?: String[] | String;
-  jsApiTicket_not_in?: String[] | String;
-  jsApiTicket_lt?: String;
-  jsApiTicket_lte?: String;
-  jsApiTicket_gt?: String;
-  jsApiTicket_gte?: String;
-  jsApiTicket_contains?: String;
-  jsApiTicket_not_contains?: String;
-  jsApiTicket_starts_with?: String;
-  jsApiTicket_not_starts_with?: String;
-  jsApiTicket_ends_with?: String;
-  jsApiTicket_not_ends_with?: String;
-  createdAt?: DateTimeInput;
-  createdAt_not?: DateTimeInput;
-  createdAt_in?: DateTimeInput[] | DateTimeInput;
-  createdAt_not_in?: DateTimeInput[] | DateTimeInput;
-  createdAt_lt?: DateTimeInput;
-  createdAt_lte?: DateTimeInput;
-  createdAt_gt?: DateTimeInput;
-  createdAt_gte?: DateTimeInput;
-  updatedAt?: DateTimeInput;
-  updatedAt_not?: DateTimeInput;
-  updatedAt_in?: DateTimeInput[] | DateTimeInput;
-  updatedAt_not_in?: DateTimeInput[] | DateTimeInput;
-  updatedAt_lt?: DateTimeInput;
-  updatedAt_lte?: DateTimeInput;
-  updatedAt_gt?: DateTimeInput;
-  updatedAt_gte?: DateTimeInput;
   deletedAt?: String;
-  deletedAt_not?: String;
-  deletedAt_in?: String[] | String;
-  deletedAt_not_in?: String[] | String;
-  deletedAt_lt?: String;
-  deletedAt_lte?: String;
-  deletedAt_gt?: String;
-  deletedAt_gte?: String;
-  deletedAt_contains?: String;
-  deletedAt_not_contains?: String;
-  deletedAt_starts_with?: String;
-  deletedAt_not_starts_with?: String;
-  deletedAt_ends_with?: String;
-  deletedAt_not_ends_with?: String;
-  AND?: WechatOfficalAccountWhereInput[] | WechatOfficalAccountWhereInput;
-  OR?: WechatOfficalAccountWhereInput[] | WechatOfficalAccountWhereInput;
-  NOT?: WechatOfficalAccountWhereInput[] | WechatOfficalAccountWhereInput;
 }
-
-export type WechatUserWhereUniqueInput = AtLeastOne<{
-  id: ID_Input;
-  openid?: String;
-}>;
 
 export interface WechatUserWhereInput {
   id?: ID_Input;
@@ -591,20 +414,6 @@ export interface WechatUserWhereInput {
   NOT?: WechatUserWhereInput[] | WechatUserWhereInput;
 }
 
-export interface SurveyRecordCreateInput {
-  htmlId: String;
-  openid: String;
-  questionSelected: Json;
-  deletedAt?: String;
-}
-
-export interface SurveyRecordUpdateInput {
-  htmlId?: String;
-  openid?: String;
-  questionSelected?: Json;
-  deletedAt?: String;
-}
-
 export interface SurveyRecordUpdateManyMutationInput {
   htmlId?: String;
   openid?: String;
@@ -612,29 +421,199 @@ export interface SurveyRecordUpdateManyMutationInput {
   deletedAt?: String;
 }
 
-export interface WechatOfficalAccountCreateInput {
-  appId: String;
-  token?: String;
-  jsApiTicket?: String;
-  deletedAt?: String;
-}
+export type SurveyRecordWhereUniqueInput = AtLeastOne<{
+  id: ID_Input;
+}>;
 
-export interface WechatOfficalAccountUpdateInput {
+export interface WechatOfficalAccountWhereInput {
+  id?: ID_Input;
+  id_not?: ID_Input;
+  id_in?: ID_Input[] | ID_Input;
+  id_not_in?: ID_Input[] | ID_Input;
+  id_lt?: ID_Input;
+  id_lte?: ID_Input;
+  id_gt?: ID_Input;
+  id_gte?: ID_Input;
+  id_contains?: ID_Input;
+  id_not_contains?: ID_Input;
+  id_starts_with?: ID_Input;
+  id_not_starts_with?: ID_Input;
+  id_ends_with?: ID_Input;
+  id_not_ends_with?: ID_Input;
   appId?: String;
+  appId_not?: String;
+  appId_in?: String[] | String;
+  appId_not_in?: String[] | String;
+  appId_lt?: String;
+  appId_lte?: String;
+  appId_gt?: String;
+  appId_gte?: String;
+  appId_contains?: String;
+  appId_not_contains?: String;
+  appId_starts_with?: String;
+  appId_not_starts_with?: String;
+  appId_ends_with?: String;
+  appId_not_ends_with?: String;
   token?: String;
+  token_not?: String;
+  token_in?: String[] | String;
+  token_not_in?: String[] | String;
+  token_lt?: String;
+  token_lte?: String;
+  token_gt?: String;
+  token_gte?: String;
+  token_contains?: String;
+  token_not_contains?: String;
+  token_starts_with?: String;
+  token_not_starts_with?: String;
+  token_ends_with?: String;
+  token_not_ends_with?: String;
   jsApiTicket?: String;
+  jsApiTicket_not?: String;
+  jsApiTicket_in?: String[] | String;
+  jsApiTicket_not_in?: String[] | String;
+  jsApiTicket_lt?: String;
+  jsApiTicket_lte?: String;
+  jsApiTicket_gt?: String;
+  jsApiTicket_gte?: String;
+  jsApiTicket_contains?: String;
+  jsApiTicket_not_contains?: String;
+  jsApiTicket_starts_with?: String;
+  jsApiTicket_not_starts_with?: String;
+  jsApiTicket_ends_with?: String;
+  jsApiTicket_not_ends_with?: String;
+  createdAt?: DateTimeInput;
+  createdAt_not?: DateTimeInput;
+  createdAt_in?: DateTimeInput[] | DateTimeInput;
+  createdAt_not_in?: DateTimeInput[] | DateTimeInput;
+  createdAt_lt?: DateTimeInput;
+  createdAt_lte?: DateTimeInput;
+  createdAt_gt?: DateTimeInput;
+  createdAt_gte?: DateTimeInput;
+  updatedAt?: DateTimeInput;
+  updatedAt_not?: DateTimeInput;
+  updatedAt_in?: DateTimeInput[] | DateTimeInput;
+  updatedAt_not_in?: DateTimeInput[] | DateTimeInput;
+  updatedAt_lt?: DateTimeInput;
+  updatedAt_lte?: DateTimeInput;
+  updatedAt_gt?: DateTimeInput;
+  updatedAt_gte?: DateTimeInput;
   deletedAt?: String;
+  deletedAt_not?: String;
+  deletedAt_in?: String[] | String;
+  deletedAt_not_in?: String[] | String;
+  deletedAt_lt?: String;
+  deletedAt_lte?: String;
+  deletedAt_gt?: String;
+  deletedAt_gte?: String;
+  deletedAt_contains?: String;
+  deletedAt_not_contains?: String;
+  deletedAt_starts_with?: String;
+  deletedAt_not_starts_with?: String;
+  deletedAt_ends_with?: String;
+  deletedAt_not_ends_with?: String;
+  AND?: WechatOfficalAccountWhereInput[] | WechatOfficalAccountWhereInput;
+  OR?: WechatOfficalAccountWhereInput[] | WechatOfficalAccountWhereInput;
+  NOT?: WechatOfficalAccountWhereInput[] | WechatOfficalAccountWhereInput;
 }
 
-export interface WechatOfficalAccountUpdateManyMutationInput {
-  appId?: String;
-  token?: String;
-  jsApiTicket?: String;
+export interface SurveyRecordWhereInput {
+  id?: ID_Input;
+  id_not?: ID_Input;
+  id_in?: ID_Input[] | ID_Input;
+  id_not_in?: ID_Input[] | ID_Input;
+  id_lt?: ID_Input;
+  id_lte?: ID_Input;
+  id_gt?: ID_Input;
+  id_gte?: ID_Input;
+  id_contains?: ID_Input;
+  id_not_contains?: ID_Input;
+  id_starts_with?: ID_Input;
+  id_not_starts_with?: ID_Input;
+  id_ends_with?: ID_Input;
+  id_not_ends_with?: ID_Input;
+  htmlId?: String;
+  htmlId_not?: String;
+  htmlId_in?: String[] | String;
+  htmlId_not_in?: String[] | String;
+  htmlId_lt?: String;
+  htmlId_lte?: String;
+  htmlId_gt?: String;
+  htmlId_gte?: String;
+  htmlId_contains?: String;
+  htmlId_not_contains?: String;
+  htmlId_starts_with?: String;
+  htmlId_not_starts_with?: String;
+  htmlId_ends_with?: String;
+  htmlId_not_ends_with?: String;
+  openid?: String;
+  openid_not?: String;
+  openid_in?: String[] | String;
+  openid_not_in?: String[] | String;
+  openid_lt?: String;
+  openid_lte?: String;
+  openid_gt?: String;
+  openid_gte?: String;
+  openid_contains?: String;
+  openid_not_contains?: String;
+  openid_starts_with?: String;
+  openid_not_starts_with?: String;
+  openid_ends_with?: String;
+  openid_not_ends_with?: String;
+  createdAt?: DateTimeInput;
+  createdAt_not?: DateTimeInput;
+  createdAt_in?: DateTimeInput[] | DateTimeInput;
+  createdAt_not_in?: DateTimeInput[] | DateTimeInput;
+  createdAt_lt?: DateTimeInput;
+  createdAt_lte?: DateTimeInput;
+  createdAt_gt?: DateTimeInput;
+  createdAt_gte?: DateTimeInput;
+  updatedAt?: DateTimeInput;
+  updatedAt_not?: DateTimeInput;
+  updatedAt_in?: DateTimeInput[] | DateTimeInput;
+  updatedAt_not_in?: DateTimeInput[] | DateTimeInput;
+  updatedAt_lt?: DateTimeInput;
+  updatedAt_lte?: DateTimeInput;
+  updatedAt_gt?: DateTimeInput;
+  updatedAt_gte?: DateTimeInput;
   deletedAt?: String;
+  deletedAt_not?: String;
+  deletedAt_in?: String[] | String;
+  deletedAt_not_in?: String[] | String;
+  deletedAt_lt?: String;
+  deletedAt_lte?: String;
+  deletedAt_gt?: String;
+  deletedAt_gte?: String;
+  deletedAt_contains?: String;
+  deletedAt_not_contains?: String;
+  deletedAt_starts_with?: String;
+  deletedAt_not_starts_with?: String;
+  deletedAt_ends_with?: String;
+  deletedAt_not_ends_with?: String;
+  AND?: SurveyRecordWhereInput[] | SurveyRecordWhereInput;
+  OR?: SurveyRecordWhereInput[] | SurveyRecordWhereInput;
+  NOT?: SurveyRecordWhereInput[] | SurveyRecordWhereInput;
 }
 
-export interface WechatUserCreateInput {
-  openid: String;
+export interface SurveyRecordSubscriptionWhereInput {
+  mutation_in?: MutationType[] | MutationType;
+  updatedFields_contains?: String;
+  updatedFields_contains_every?: String[] | String;
+  updatedFields_contains_some?: String[] | String;
+  node?: SurveyRecordWhereInput;
+  AND?:
+    | SurveyRecordSubscriptionWhereInput[]
+    | SurveyRecordSubscriptionWhereInput;
+  OR?:
+    | SurveyRecordSubscriptionWhereInput[]
+    | SurveyRecordSubscriptionWhereInput;
+  NOT?:
+    | SurveyRecordSubscriptionWhereInput[]
+    | SurveyRecordSubscriptionWhereInput;
+}
+
+export interface WechatUserUpdateInput {
+  openid?: String;
   nickname?: String;
   sex?: Int;
   country?: String;
@@ -645,8 +624,74 @@ export interface WechatUserCreateInput {
   deletedAt?: String;
 }
 
-export interface WechatUserUpdateInput {
+export interface SurveyRecordUpdateInput {
+  htmlId?: String;
   openid?: String;
+  questionSelected?: Json;
+  deletedAt?: String;
+}
+
+export interface WechatOfficalAccountUpdateManyMutationInput {
+  appId?: String;
+  token?: String;
+  jsApiTicket?: String;
+  deletedAt?: String;
+}
+
+export interface WechatOfficalAccountCreateInput {
+  appId: String;
+  token?: String;
+  jsApiTicket?: String;
+  deletedAt?: String;
+}
+
+export interface WechatOfficalAccountSubscriptionWhereInput {
+  mutation_in?: MutationType[] | MutationType;
+  updatedFields_contains?: String;
+  updatedFields_contains_every?: String[] | String;
+  updatedFields_contains_some?: String[] | String;
+  node?: WechatOfficalAccountWhereInput;
+  AND?:
+    | WechatOfficalAccountSubscriptionWhereInput[]
+    | WechatOfficalAccountSubscriptionWhereInput;
+  OR?:
+    | WechatOfficalAccountSubscriptionWhereInput[]
+    | WechatOfficalAccountSubscriptionWhereInput;
+  NOT?:
+    | WechatOfficalAccountSubscriptionWhereInput[]
+    | WechatOfficalAccountSubscriptionWhereInput;
+}
+
+export type WechatUserWhereUniqueInput = AtLeastOne<{
+  id: ID_Input;
+  openid?: String;
+}>;
+
+export interface SurveyRecordCreateInput {
+  htmlId: String;
+  openid: String;
+  questionSelected: Json;
+  deletedAt?: String;
+}
+
+export type WechatOfficalAccountWhereUniqueInput = AtLeastOne<{
+  id: ID_Input;
+  appId?: String;
+}>;
+
+export interface WechatUserSubscriptionWhereInput {
+  mutation_in?: MutationType[] | MutationType;
+  updatedFields_contains?: String;
+  updatedFields_contains_every?: String[] | String;
+  updatedFields_contains_some?: String[] | String;
+  node?: WechatUserWhereInput;
+  AND?: WechatUserSubscriptionWhereInput[] | WechatUserSubscriptionWhereInput;
+  OR?: WechatUserSubscriptionWhereInput[] | WechatUserSubscriptionWhereInput;
+  NOT?: WechatUserSubscriptionWhereInput[] | WechatUserSubscriptionWhereInput;
+}
+
+export interface WechatUserCreateInput {
+  openid: String;
   nickname?: String;
   sex?: Int;
   country?: String;
@@ -669,305 +714,8 @@ export interface WechatUserUpdateManyMutationInput {
   deletedAt?: String;
 }
 
-export interface SurveyRecordSubscriptionWhereInput {
-  mutation_in?: MutationType[] | MutationType;
-  updatedFields_contains?: String;
-  updatedFields_contains_every?: String[] | String;
-  updatedFields_contains_some?: String[] | String;
-  node?: SurveyRecordWhereInput;
-  AND?:
-    | SurveyRecordSubscriptionWhereInput[]
-    | SurveyRecordSubscriptionWhereInput;
-  OR?:
-    | SurveyRecordSubscriptionWhereInput[]
-    | SurveyRecordSubscriptionWhereInput;
-  NOT?:
-    | SurveyRecordSubscriptionWhereInput[]
-    | SurveyRecordSubscriptionWhereInput;
-}
-
-export interface WechatOfficalAccountSubscriptionWhereInput {
-  mutation_in?: MutationType[] | MutationType;
-  updatedFields_contains?: String;
-  updatedFields_contains_every?: String[] | String;
-  updatedFields_contains_some?: String[] | String;
-  node?: WechatOfficalAccountWhereInput;
-  AND?:
-    | WechatOfficalAccountSubscriptionWhereInput[]
-    | WechatOfficalAccountSubscriptionWhereInput;
-  OR?:
-    | WechatOfficalAccountSubscriptionWhereInput[]
-    | WechatOfficalAccountSubscriptionWhereInput;
-  NOT?:
-    | WechatOfficalAccountSubscriptionWhereInput[]
-    | WechatOfficalAccountSubscriptionWhereInput;
-}
-
-export interface WechatUserSubscriptionWhereInput {
-  mutation_in?: MutationType[] | MutationType;
-  updatedFields_contains?: String;
-  updatedFields_contains_every?: String[] | String;
-  updatedFields_contains_some?: String[] | String;
-  node?: WechatUserWhereInput;
-  AND?: WechatUserSubscriptionWhereInput[] | WechatUserSubscriptionWhereInput;
-  OR?: WechatUserSubscriptionWhereInput[] | WechatUserSubscriptionWhereInput;
-  NOT?: WechatUserSubscriptionWhereInput[] | WechatUserSubscriptionWhereInput;
-}
-
 export interface NodeNode {
   id: ID_Output;
-}
-
-export interface SurveyRecord {
-  id: ID_Output;
-  htmlId: String;
-  openid: String;
-  questionSelected: Json;
-  createdAt: DateTimeOutput;
-  updatedAt: DateTimeOutput;
-  deletedAt?: String;
-}
-
-export interface SurveyRecordPromise
-  extends Promise<SurveyRecord>,
-    Fragmentable {
-  id: () => Promise<ID_Output>;
-  htmlId: () => Promise<String>;
-  openid: () => Promise<String>;
-  questionSelected: () => Promise<Json>;
-  createdAt: () => Promise<DateTimeOutput>;
-  updatedAt: () => Promise<DateTimeOutput>;
-  deletedAt: () => Promise<String>;
-}
-
-export interface SurveyRecordSubscription
-  extends Promise<AsyncIterator<SurveyRecord>>,
-    Fragmentable {
-  id: () => Promise<AsyncIterator<ID_Output>>;
-  htmlId: () => Promise<AsyncIterator<String>>;
-  openid: () => Promise<AsyncIterator<String>>;
-  questionSelected: () => Promise<AsyncIterator<Json>>;
-  createdAt: () => Promise<AsyncIterator<DateTimeOutput>>;
-  updatedAt: () => Promise<AsyncIterator<DateTimeOutput>>;
-  deletedAt: () => Promise<AsyncIterator<String>>;
-}
-
-export interface SurveyRecordConnection {
-  pageInfo: PageInfo;
-  edges: SurveyRecordEdge[];
-}
-
-export interface SurveyRecordConnectionPromise
-  extends Promise<SurveyRecordConnection>,
-    Fragmentable {
-  pageInfo: <T = PageInfoPromise>() => T;
-  edges: <T = FragmentableArray<SurveyRecordEdge>>() => T;
-  aggregate: <T = AggregateSurveyRecordPromise>() => T;
-}
-
-export interface SurveyRecordConnectionSubscription
-  extends Promise<AsyncIterator<SurveyRecordConnection>>,
-    Fragmentable {
-  pageInfo: <T = PageInfoSubscription>() => T;
-  edges: <T = Promise<AsyncIterator<SurveyRecordEdgeSubscription>>>() => T;
-  aggregate: <T = AggregateSurveyRecordSubscription>() => T;
-}
-
-export interface PageInfo {
-  hasNextPage: Boolean;
-  hasPreviousPage: Boolean;
-  startCursor?: String;
-  endCursor?: String;
-}
-
-export interface PageInfoPromise extends Promise<PageInfo>, Fragmentable {
-  hasNextPage: () => Promise<Boolean>;
-  hasPreviousPage: () => Promise<Boolean>;
-  startCursor: () => Promise<String>;
-  endCursor: () => Promise<String>;
-}
-
-export interface PageInfoSubscription
-  extends Promise<AsyncIterator<PageInfo>>,
-    Fragmentable {
-  hasNextPage: () => Promise<AsyncIterator<Boolean>>;
-  hasPreviousPage: () => Promise<AsyncIterator<Boolean>>;
-  startCursor: () => Promise<AsyncIterator<String>>;
-  endCursor: () => Promise<AsyncIterator<String>>;
-}
-
-export interface SurveyRecordEdge {
-  node: SurveyRecord;
-  cursor: String;
-}
-
-export interface SurveyRecordEdgePromise
-  extends Promise<SurveyRecordEdge>,
-    Fragmentable {
-  node: <T = SurveyRecordPromise>() => T;
-  cursor: () => Promise<String>;
-}
-
-export interface SurveyRecordEdgeSubscription
-  extends Promise<AsyncIterator<SurveyRecordEdge>>,
-    Fragmentable {
-  node: <T = SurveyRecordSubscription>() => T;
-  cursor: () => Promise<AsyncIterator<String>>;
-}
-
-export interface AggregateSurveyRecord {
-  count: Int;
-}
-
-export interface AggregateSurveyRecordPromise
-  extends Promise<AggregateSurveyRecord>,
-    Fragmentable {
-  count: () => Promise<Int>;
-}
-
-export interface AggregateSurveyRecordSubscription
-  extends Promise<AsyncIterator<AggregateSurveyRecord>>,
-    Fragmentable {
-  count: () => Promise<AsyncIterator<Int>>;
-}
-
-export interface WechatOfficalAccount {
-  id: ID_Output;
-  appId: String;
-  token?: String;
-  jsApiTicket?: String;
-  createdAt: DateTimeOutput;
-  updatedAt: DateTimeOutput;
-  deletedAt?: String;
-}
-
-export interface WechatOfficalAccountPromise
-  extends Promise<WechatOfficalAccount>,
-    Fragmentable {
-  id: () => Promise<ID_Output>;
-  appId: () => Promise<String>;
-  token: () => Promise<String>;
-  jsApiTicket: () => Promise<String>;
-  createdAt: () => Promise<DateTimeOutput>;
-  updatedAt: () => Promise<DateTimeOutput>;
-  deletedAt: () => Promise<String>;
-}
-
-export interface WechatOfficalAccountSubscription
-  extends Promise<AsyncIterator<WechatOfficalAccount>>,
-    Fragmentable {
-  id: () => Promise<AsyncIterator<ID_Output>>;
-  appId: () => Promise<AsyncIterator<String>>;
-  token: () => Promise<AsyncIterator<String>>;
-  jsApiTicket: () => Promise<AsyncIterator<String>>;
-  createdAt: () => Promise<AsyncIterator<DateTimeOutput>>;
-  updatedAt: () => Promise<AsyncIterator<DateTimeOutput>>;
-  deletedAt: () => Promise<AsyncIterator<String>>;
-}
-
-export interface WechatOfficalAccountConnection {
-  pageInfo: PageInfo;
-  edges: WechatOfficalAccountEdge[];
-}
-
-export interface WechatOfficalAccountConnectionPromise
-  extends Promise<WechatOfficalAccountConnection>,
-    Fragmentable {
-  pageInfo: <T = PageInfoPromise>() => T;
-  edges: <T = FragmentableArray<WechatOfficalAccountEdge>>() => T;
-  aggregate: <T = AggregateWechatOfficalAccountPromise>() => T;
-}
-
-export interface WechatOfficalAccountConnectionSubscription
-  extends Promise<AsyncIterator<WechatOfficalAccountConnection>>,
-    Fragmentable {
-  pageInfo: <T = PageInfoSubscription>() => T;
-  edges: <
-    T = Promise<AsyncIterator<WechatOfficalAccountEdgeSubscription>>
-  >() => T;
-  aggregate: <T = AggregateWechatOfficalAccountSubscription>() => T;
-}
-
-export interface WechatOfficalAccountEdge {
-  node: WechatOfficalAccount;
-  cursor: String;
-}
-
-export interface WechatOfficalAccountEdgePromise
-  extends Promise<WechatOfficalAccountEdge>,
-    Fragmentable {
-  node: <T = WechatOfficalAccountPromise>() => T;
-  cursor: () => Promise<String>;
-}
-
-export interface WechatOfficalAccountEdgeSubscription
-  extends Promise<AsyncIterator<WechatOfficalAccountEdge>>,
-    Fragmentable {
-  node: <T = WechatOfficalAccountSubscription>() => T;
-  cursor: () => Promise<AsyncIterator<String>>;
-}
-
-export interface AggregateWechatOfficalAccount {
-  count: Int;
-}
-
-export interface AggregateWechatOfficalAccountPromise
-  extends Promise<AggregateWechatOfficalAccount>,
-    Fragmentable {
-  count: () => Promise<Int>;
-}
-
-export interface AggregateWechatOfficalAccountSubscription
-  extends Promise<AsyncIterator<AggregateWechatOfficalAccount>>,
-    Fragmentable {
-  count: () => Promise<AsyncIterator<Int>>;
-}
-
-export interface WechatUser {
-  id: ID_Output;
-  openid: String;
-  nickname?: String;
-  sex?: Int;
-  country?: String;
-  province?: String;
-  city?: String;
-  headimgurl?: String;
-  unionid?: String;
-  createdAt: DateTimeOutput;
-  updatedAt: DateTimeOutput;
-  deletedAt?: String;
-}
-
-export interface WechatUserPromise extends Promise<WechatUser>, Fragmentable {
-  id: () => Promise<ID_Output>;
-  openid: () => Promise<String>;
-  nickname: () => Promise<String>;
-  sex: () => Promise<Int>;
-  country: () => Promise<String>;
-  province: () => Promise<String>;
-  city: () => Promise<String>;
-  headimgurl: () => Promise<String>;
-  unionid: () => Promise<String>;
-  createdAt: () => Promise<DateTimeOutput>;
-  updatedAt: () => Promise<DateTimeOutput>;
-  deletedAt: () => Promise<String>;
-}
-
-export interface WechatUserSubscription
-  extends Promise<AsyncIterator<WechatUser>>,
-    Fragmentable {
-  id: () => Promise<AsyncIterator<ID_Output>>;
-  openid: () => Promise<AsyncIterator<String>>;
-  nickname: () => Promise<AsyncIterator<String>>;
-  sex: () => Promise<AsyncIterator<Int>>;
-  country: () => Promise<AsyncIterator<String>>;
-  province: () => Promise<AsyncIterator<String>>;
-  city: () => Promise<AsyncIterator<String>>;
-  headimgurl: () => Promise<AsyncIterator<String>>;
-  unionid: () => Promise<AsyncIterator<String>>;
-  createdAt: () => Promise<AsyncIterator<DateTimeOutput>>;
-  updatedAt: () => Promise<AsyncIterator<DateTimeOutput>>;
-  deletedAt: () => Promise<AsyncIterator<String>>;
 }
 
 export interface WechatUserConnection {
@@ -991,198 +739,27 @@ export interface WechatUserConnectionSubscription
   aggregate: <T = AggregateWechatUserSubscription>() => T;
 }
 
-export interface WechatUserEdge {
-  node: WechatUser;
-  cursor: String;
+export interface PageInfo {
+  hasNextPage: Boolean;
+  hasPreviousPage: Boolean;
+  startCursor?: String;
+  endCursor?: String;
 }
 
-export interface WechatUserEdgePromise
-  extends Promise<WechatUserEdge>,
+export interface PageInfoPromise extends Promise<PageInfo>, Fragmentable {
+  hasNextPage: () => Promise<Boolean>;
+  hasPreviousPage: () => Promise<Boolean>;
+  startCursor: () => Promise<String>;
+  endCursor: () => Promise<String>;
+}
+
+export interface PageInfoSubscription
+  extends Promise<AsyncIterator<PageInfo>>,
     Fragmentable {
-  node: <T = WechatUserPromise>() => T;
-  cursor: () => Promise<String>;
-}
-
-export interface WechatUserEdgeSubscription
-  extends Promise<AsyncIterator<WechatUserEdge>>,
-    Fragmentable {
-  node: <T = WechatUserSubscription>() => T;
-  cursor: () => Promise<AsyncIterator<String>>;
-}
-
-export interface AggregateWechatUser {
-  count: Int;
-}
-
-export interface AggregateWechatUserPromise
-  extends Promise<AggregateWechatUser>,
-    Fragmentable {
-  count: () => Promise<Int>;
-}
-
-export interface AggregateWechatUserSubscription
-  extends Promise<AsyncIterator<AggregateWechatUser>>,
-    Fragmentable {
-  count: () => Promise<AsyncIterator<Int>>;
-}
-
-export interface BatchPayload {
-  count: Long;
-}
-
-export interface BatchPayloadPromise
-  extends Promise<BatchPayload>,
-    Fragmentable {
-  count: () => Promise<Long>;
-}
-
-export interface BatchPayloadSubscription
-  extends Promise<AsyncIterator<BatchPayload>>,
-    Fragmentable {
-  count: () => Promise<AsyncIterator<Long>>;
-}
-
-export interface SurveyRecordSubscriptionPayload {
-  mutation: MutationType;
-  node: SurveyRecord;
-  updatedFields: String[];
-  previousValues: SurveyRecordPreviousValues;
-}
-
-export interface SurveyRecordSubscriptionPayloadPromise
-  extends Promise<SurveyRecordSubscriptionPayload>,
-    Fragmentable {
-  mutation: () => Promise<MutationType>;
-  node: <T = SurveyRecordPromise>() => T;
-  updatedFields: () => Promise<String[]>;
-  previousValues: <T = SurveyRecordPreviousValuesPromise>() => T;
-}
-
-export interface SurveyRecordSubscriptionPayloadSubscription
-  extends Promise<AsyncIterator<SurveyRecordSubscriptionPayload>>,
-    Fragmentable {
-  mutation: () => Promise<AsyncIterator<MutationType>>;
-  node: <T = SurveyRecordSubscription>() => T;
-  updatedFields: () => Promise<AsyncIterator<String[]>>;
-  previousValues: <T = SurveyRecordPreviousValuesSubscription>() => T;
-}
-
-export interface SurveyRecordPreviousValues {
-  id: ID_Output;
-  htmlId: String;
-  openid: String;
-  questionSelected: Json;
-  createdAt: DateTimeOutput;
-  updatedAt: DateTimeOutput;
-  deletedAt?: String;
-}
-
-export interface SurveyRecordPreviousValuesPromise
-  extends Promise<SurveyRecordPreviousValues>,
-    Fragmentable {
-  id: () => Promise<ID_Output>;
-  htmlId: () => Promise<String>;
-  openid: () => Promise<String>;
-  questionSelected: () => Promise<Json>;
-  createdAt: () => Promise<DateTimeOutput>;
-  updatedAt: () => Promise<DateTimeOutput>;
-  deletedAt: () => Promise<String>;
-}
-
-export interface SurveyRecordPreviousValuesSubscription
-  extends Promise<AsyncIterator<SurveyRecordPreviousValues>>,
-    Fragmentable {
-  id: () => Promise<AsyncIterator<ID_Output>>;
-  htmlId: () => Promise<AsyncIterator<String>>;
-  openid: () => Promise<AsyncIterator<String>>;
-  questionSelected: () => Promise<AsyncIterator<Json>>;
-  createdAt: () => Promise<AsyncIterator<DateTimeOutput>>;
-  updatedAt: () => Promise<AsyncIterator<DateTimeOutput>>;
-  deletedAt: () => Promise<AsyncIterator<String>>;
-}
-
-export interface WechatOfficalAccountSubscriptionPayload {
-  mutation: MutationType;
-  node: WechatOfficalAccount;
-  updatedFields: String[];
-  previousValues: WechatOfficalAccountPreviousValues;
-}
-
-export interface WechatOfficalAccountSubscriptionPayloadPromise
-  extends Promise<WechatOfficalAccountSubscriptionPayload>,
-    Fragmentable {
-  mutation: () => Promise<MutationType>;
-  node: <T = WechatOfficalAccountPromise>() => T;
-  updatedFields: () => Promise<String[]>;
-  previousValues: <T = WechatOfficalAccountPreviousValuesPromise>() => T;
-}
-
-export interface WechatOfficalAccountSubscriptionPayloadSubscription
-  extends Promise<AsyncIterator<WechatOfficalAccountSubscriptionPayload>>,
-    Fragmentable {
-  mutation: () => Promise<AsyncIterator<MutationType>>;
-  node: <T = WechatOfficalAccountSubscription>() => T;
-  updatedFields: () => Promise<AsyncIterator<String[]>>;
-  previousValues: <T = WechatOfficalAccountPreviousValuesSubscription>() => T;
-}
-
-export interface WechatOfficalAccountPreviousValues {
-  id: ID_Output;
-  appId: String;
-  token?: String;
-  jsApiTicket?: String;
-  createdAt: DateTimeOutput;
-  updatedAt: DateTimeOutput;
-  deletedAt?: String;
-}
-
-export interface WechatOfficalAccountPreviousValuesPromise
-  extends Promise<WechatOfficalAccountPreviousValues>,
-    Fragmentable {
-  id: () => Promise<ID_Output>;
-  appId: () => Promise<String>;
-  token: () => Promise<String>;
-  jsApiTicket: () => Promise<String>;
-  createdAt: () => Promise<DateTimeOutput>;
-  updatedAt: () => Promise<DateTimeOutput>;
-  deletedAt: () => Promise<String>;
-}
-
-export interface WechatOfficalAccountPreviousValuesSubscription
-  extends Promise<AsyncIterator<WechatOfficalAccountPreviousValues>>,
-    Fragmentable {
-  id: () => Promise<AsyncIterator<ID_Output>>;
-  appId: () => Promise<AsyncIterator<String>>;
-  token: () => Promise<AsyncIterator<String>>;
-  jsApiTicket: () => Promise<AsyncIterator<String>>;
-  createdAt: () => Promise<AsyncIterator<DateTimeOutput>>;
-  updatedAt: () => Promise<AsyncIterator<DateTimeOutput>>;
-  deletedAt: () => Promise<AsyncIterator<String>>;
-}
-
-export interface WechatUserSubscriptionPayload {
-  mutation: MutationType;
-  node: WechatUser;
-  updatedFields: String[];
-  previousValues: WechatUserPreviousValues;
-}
-
-export interface WechatUserSubscriptionPayloadPromise
-  extends Promise<WechatUserSubscriptionPayload>,
-    Fragmentable {
-  mutation: () => Promise<MutationType>;
-  node: <T = WechatUserPromise>() => T;
-  updatedFields: () => Promise<String[]>;
-  previousValues: <T = WechatUserPreviousValuesPromise>() => T;
-}
-
-export interface WechatUserSubscriptionPayloadSubscription
-  extends Promise<AsyncIterator<WechatUserSubscriptionPayload>>,
-    Fragmentable {
-  mutation: () => Promise<AsyncIterator<MutationType>>;
-  node: <T = WechatUserSubscription>() => T;
-  updatedFields: () => Promise<AsyncIterator<String[]>>;
-  previousValues: <T = WechatUserPreviousValuesSubscription>() => T;
+  hasNextPage: () => Promise<AsyncIterator<Boolean>>;
+  hasPreviousPage: () => Promise<AsyncIterator<Boolean>>;
+  startCursor: () => Promise<AsyncIterator<String>>;
+  endCursor: () => Promise<AsyncIterator<String>>;
 }
 
 export interface WechatUserPreviousValues {
@@ -1234,18 +811,428 @@ export interface WechatUserPreviousValuesSubscription
   deletedAt: () => Promise<AsyncIterator<String>>;
 }
 
-/*
-The `ID` scalar type represents a unique identifier, often used to refetch an object or as key for a cache. The ID type appears in a JSON response as a String; however, it is not intended to be human-readable. When expected as an input type, any string (such as `"4"`) or integer (such as `4`) input value will be accepted as an ID.
-*/
-export type ID_Input = string | number;
-export type ID_Output = string;
+export interface SurveyRecordConnection {
+  pageInfo: PageInfo;
+  edges: SurveyRecordEdge[];
+}
 
-/*
-The `String` scalar type represents textual data, represented as UTF-8 character sequences. The String type is most often used by GraphQL to represent free-form human-readable text.
-*/
-export type String = string;
+export interface SurveyRecordConnectionPromise
+  extends Promise<SurveyRecordConnection>,
+    Fragmentable {
+  pageInfo: <T = PageInfoPromise>() => T;
+  edges: <T = FragmentableArray<SurveyRecordEdge>>() => T;
+  aggregate: <T = AggregateSurveyRecordPromise>() => T;
+}
 
-export type Json = any;
+export interface SurveyRecordConnectionSubscription
+  extends Promise<AsyncIterator<SurveyRecordConnection>>,
+    Fragmentable {
+  pageInfo: <T = PageInfoSubscription>() => T;
+  edges: <T = Promise<AsyncIterator<SurveyRecordEdgeSubscription>>>() => T;
+  aggregate: <T = AggregateSurveyRecordSubscription>() => T;
+}
+
+export interface WechatUser {
+  id: ID_Output;
+  openid: String;
+  nickname?: String;
+  sex?: Int;
+  country?: String;
+  province?: String;
+  city?: String;
+  headimgurl?: String;
+  unionid?: String;
+  createdAt: DateTimeOutput;
+  updatedAt: DateTimeOutput;
+  deletedAt?: String;
+}
+
+export interface WechatUserPromise extends Promise<WechatUser>, Fragmentable {
+  id: () => Promise<ID_Output>;
+  openid: () => Promise<String>;
+  nickname: () => Promise<String>;
+  sex: () => Promise<Int>;
+  country: () => Promise<String>;
+  province: () => Promise<String>;
+  city: () => Promise<String>;
+  headimgurl: () => Promise<String>;
+  unionid: () => Promise<String>;
+  createdAt: () => Promise<DateTimeOutput>;
+  updatedAt: () => Promise<DateTimeOutput>;
+  deletedAt: () => Promise<String>;
+}
+
+export interface WechatUserSubscription
+  extends Promise<AsyncIterator<WechatUser>>,
+    Fragmentable {
+  id: () => Promise<AsyncIterator<ID_Output>>;
+  openid: () => Promise<AsyncIterator<String>>;
+  nickname: () => Promise<AsyncIterator<String>>;
+  sex: () => Promise<AsyncIterator<Int>>;
+  country: () => Promise<AsyncIterator<String>>;
+  province: () => Promise<AsyncIterator<String>>;
+  city: () => Promise<AsyncIterator<String>>;
+  headimgurl: () => Promise<AsyncIterator<String>>;
+  unionid: () => Promise<AsyncIterator<String>>;
+  createdAt: () => Promise<AsyncIterator<DateTimeOutput>>;
+  updatedAt: () => Promise<AsyncIterator<DateTimeOutput>>;
+  deletedAt: () => Promise<AsyncIterator<String>>;
+}
+
+export interface WechatUserEdge {
+  node: WechatUser;
+  cursor: String;
+}
+
+export interface WechatUserEdgePromise
+  extends Promise<WechatUserEdge>,
+    Fragmentable {
+  node: <T = WechatUserPromise>() => T;
+  cursor: () => Promise<String>;
+}
+
+export interface WechatUserEdgeSubscription
+  extends Promise<AsyncIterator<WechatUserEdge>>,
+    Fragmentable {
+  node: <T = WechatUserSubscription>() => T;
+  cursor: () => Promise<AsyncIterator<String>>;
+}
+
+export interface AggregateWechatOfficalAccount {
+  count: Int;
+}
+
+export interface AggregateWechatOfficalAccountPromise
+  extends Promise<AggregateWechatOfficalAccount>,
+    Fragmentable {
+  count: () => Promise<Int>;
+}
+
+export interface AggregateWechatOfficalAccountSubscription
+  extends Promise<AsyncIterator<AggregateWechatOfficalAccount>>,
+    Fragmentable {
+  count: () => Promise<AsyncIterator<Int>>;
+}
+
+export interface WechatOfficalAccountPreviousValues {
+  id: ID_Output;
+  appId: String;
+  token?: String;
+  jsApiTicket?: String;
+  createdAt: DateTimeOutput;
+  updatedAt: DateTimeOutput;
+  deletedAt?: String;
+}
+
+export interface WechatOfficalAccountPreviousValuesPromise
+  extends Promise<WechatOfficalAccountPreviousValues>,
+    Fragmentable {
+  id: () => Promise<ID_Output>;
+  appId: () => Promise<String>;
+  token: () => Promise<String>;
+  jsApiTicket: () => Promise<String>;
+  createdAt: () => Promise<DateTimeOutput>;
+  updatedAt: () => Promise<DateTimeOutput>;
+  deletedAt: () => Promise<String>;
+}
+
+export interface WechatOfficalAccountPreviousValuesSubscription
+  extends Promise<AsyncIterator<WechatOfficalAccountPreviousValues>>,
+    Fragmentable {
+  id: () => Promise<AsyncIterator<ID_Output>>;
+  appId: () => Promise<AsyncIterator<String>>;
+  token: () => Promise<AsyncIterator<String>>;
+  jsApiTicket: () => Promise<AsyncIterator<String>>;
+  createdAt: () => Promise<AsyncIterator<DateTimeOutput>>;
+  updatedAt: () => Promise<AsyncIterator<DateTimeOutput>>;
+  deletedAt: () => Promise<AsyncIterator<String>>;
+}
+
+export interface SurveyRecordPreviousValues {
+  id: ID_Output;
+  htmlId: String;
+  openid: String;
+  questionSelected: Json;
+  createdAt: DateTimeOutput;
+  updatedAt: DateTimeOutput;
+  deletedAt?: String;
+}
+
+export interface SurveyRecordPreviousValuesPromise
+  extends Promise<SurveyRecordPreviousValues>,
+    Fragmentable {
+  id: () => Promise<ID_Output>;
+  htmlId: () => Promise<String>;
+  openid: () => Promise<String>;
+  questionSelected: () => Promise<Json>;
+  createdAt: () => Promise<DateTimeOutput>;
+  updatedAt: () => Promise<DateTimeOutput>;
+  deletedAt: () => Promise<String>;
+}
+
+export interface SurveyRecordPreviousValuesSubscription
+  extends Promise<AsyncIterator<SurveyRecordPreviousValues>>,
+    Fragmentable {
+  id: () => Promise<AsyncIterator<ID_Output>>;
+  htmlId: () => Promise<AsyncIterator<String>>;
+  openid: () => Promise<AsyncIterator<String>>;
+  questionSelected: () => Promise<AsyncIterator<Json>>;
+  createdAt: () => Promise<AsyncIterator<DateTimeOutput>>;
+  updatedAt: () => Promise<AsyncIterator<DateTimeOutput>>;
+  deletedAt: () => Promise<AsyncIterator<String>>;
+}
+
+export interface AggregateWechatUser {
+  count: Int;
+}
+
+export interface AggregateWechatUserPromise
+  extends Promise<AggregateWechatUser>,
+    Fragmentable {
+  count: () => Promise<Int>;
+}
+
+export interface AggregateWechatUserSubscription
+  extends Promise<AsyncIterator<AggregateWechatUser>>,
+    Fragmentable {
+  count: () => Promise<AsyncIterator<Int>>;
+}
+
+export interface WechatOfficalAccountConnection {
+  pageInfo: PageInfo;
+  edges: WechatOfficalAccountEdge[];
+}
+
+export interface WechatOfficalAccountConnectionPromise
+  extends Promise<WechatOfficalAccountConnection>,
+    Fragmentable {
+  pageInfo: <T = PageInfoPromise>() => T;
+  edges: <T = FragmentableArray<WechatOfficalAccountEdge>>() => T;
+  aggregate: <T = AggregateWechatOfficalAccountPromise>() => T;
+}
+
+export interface WechatOfficalAccountConnectionSubscription
+  extends Promise<AsyncIterator<WechatOfficalAccountConnection>>,
+    Fragmentable {
+  pageInfo: <T = PageInfoSubscription>() => T;
+  edges: <
+    T = Promise<AsyncIterator<WechatOfficalAccountEdgeSubscription>>
+  >() => T;
+  aggregate: <T = AggregateWechatOfficalAccountSubscription>() => T;
+}
+
+export interface WechatUserSubscriptionPayload {
+  mutation: MutationType;
+  node: WechatUser;
+  updatedFields: String[];
+  previousValues: WechatUserPreviousValues;
+}
+
+export interface WechatUserSubscriptionPayloadPromise
+  extends Promise<WechatUserSubscriptionPayload>,
+    Fragmentable {
+  mutation: () => Promise<MutationType>;
+  node: <T = WechatUserPromise>() => T;
+  updatedFields: () => Promise<String[]>;
+  previousValues: <T = WechatUserPreviousValuesPromise>() => T;
+}
+
+export interface WechatUserSubscriptionPayloadSubscription
+  extends Promise<AsyncIterator<WechatUserSubscriptionPayload>>,
+    Fragmentable {
+  mutation: () => Promise<AsyncIterator<MutationType>>;
+  node: <T = WechatUserSubscription>() => T;
+  updatedFields: () => Promise<AsyncIterator<String[]>>;
+  previousValues: <T = WechatUserPreviousValuesSubscription>() => T;
+}
+
+export interface SurveyRecordSubscriptionPayload {
+  mutation: MutationType;
+  node: SurveyRecord;
+  updatedFields: String[];
+  previousValues: SurveyRecordPreviousValues;
+}
+
+export interface SurveyRecordSubscriptionPayloadPromise
+  extends Promise<SurveyRecordSubscriptionPayload>,
+    Fragmentable {
+  mutation: () => Promise<MutationType>;
+  node: <T = SurveyRecordPromise>() => T;
+  updatedFields: () => Promise<String[]>;
+  previousValues: <T = SurveyRecordPreviousValuesPromise>() => T;
+}
+
+export interface SurveyRecordSubscriptionPayloadSubscription
+  extends Promise<AsyncIterator<SurveyRecordSubscriptionPayload>>,
+    Fragmentable {
+  mutation: () => Promise<AsyncIterator<MutationType>>;
+  node: <T = SurveyRecordSubscription>() => T;
+  updatedFields: () => Promise<AsyncIterator<String[]>>;
+  previousValues: <T = SurveyRecordPreviousValuesSubscription>() => T;
+}
+
+export interface WechatOfficalAccountSubscriptionPayload {
+  mutation: MutationType;
+  node: WechatOfficalAccount;
+  updatedFields: String[];
+  previousValues: WechatOfficalAccountPreviousValues;
+}
+
+export interface WechatOfficalAccountSubscriptionPayloadPromise
+  extends Promise<WechatOfficalAccountSubscriptionPayload>,
+    Fragmentable {
+  mutation: () => Promise<MutationType>;
+  node: <T = WechatOfficalAccountPromise>() => T;
+  updatedFields: () => Promise<String[]>;
+  previousValues: <T = WechatOfficalAccountPreviousValuesPromise>() => T;
+}
+
+export interface WechatOfficalAccountSubscriptionPayloadSubscription
+  extends Promise<AsyncIterator<WechatOfficalAccountSubscriptionPayload>>,
+    Fragmentable {
+  mutation: () => Promise<AsyncIterator<MutationType>>;
+  node: <T = WechatOfficalAccountSubscription>() => T;
+  updatedFields: () => Promise<AsyncIterator<String[]>>;
+  previousValues: <T = WechatOfficalAccountPreviousValuesSubscription>() => T;
+}
+
+export interface WechatOfficalAccount {
+  id: ID_Output;
+  appId: String;
+  token?: String;
+  jsApiTicket?: String;
+  createdAt: DateTimeOutput;
+  updatedAt: DateTimeOutput;
+  deletedAt?: String;
+}
+
+export interface WechatOfficalAccountPromise
+  extends Promise<WechatOfficalAccount>,
+    Fragmentable {
+  id: () => Promise<ID_Output>;
+  appId: () => Promise<String>;
+  token: () => Promise<String>;
+  jsApiTicket: () => Promise<String>;
+  createdAt: () => Promise<DateTimeOutput>;
+  updatedAt: () => Promise<DateTimeOutput>;
+  deletedAt: () => Promise<String>;
+}
+
+export interface WechatOfficalAccountSubscription
+  extends Promise<AsyncIterator<WechatOfficalAccount>>,
+    Fragmentable {
+  id: () => Promise<AsyncIterator<ID_Output>>;
+  appId: () => Promise<AsyncIterator<String>>;
+  token: () => Promise<AsyncIterator<String>>;
+  jsApiTicket: () => Promise<AsyncIterator<String>>;
+  createdAt: () => Promise<AsyncIterator<DateTimeOutput>>;
+  updatedAt: () => Promise<AsyncIterator<DateTimeOutput>>;
+  deletedAt: () => Promise<AsyncIterator<String>>;
+}
+
+export interface WechatOfficalAccountEdge {
+  node: WechatOfficalAccount;
+  cursor: String;
+}
+
+export interface WechatOfficalAccountEdgePromise
+  extends Promise<WechatOfficalAccountEdge>,
+    Fragmentable {
+  node: <T = WechatOfficalAccountPromise>() => T;
+  cursor: () => Promise<String>;
+}
+
+export interface WechatOfficalAccountEdgeSubscription
+  extends Promise<AsyncIterator<WechatOfficalAccountEdge>>,
+    Fragmentable {
+  node: <T = WechatOfficalAccountSubscription>() => T;
+  cursor: () => Promise<AsyncIterator<String>>;
+}
+
+export interface AggregateSurveyRecord {
+  count: Int;
+}
+
+export interface AggregateSurveyRecordPromise
+  extends Promise<AggregateSurveyRecord>,
+    Fragmentable {
+  count: () => Promise<Int>;
+}
+
+export interface AggregateSurveyRecordSubscription
+  extends Promise<AsyncIterator<AggregateSurveyRecord>>,
+    Fragmentable {
+  count: () => Promise<AsyncIterator<Int>>;
+}
+
+export interface BatchPayload {
+  count: Long;
+}
+
+export interface BatchPayloadPromise
+  extends Promise<BatchPayload>,
+    Fragmentable {
+  count: () => Promise<Long>;
+}
+
+export interface BatchPayloadSubscription
+  extends Promise<AsyncIterator<BatchPayload>>,
+    Fragmentable {
+  count: () => Promise<AsyncIterator<Long>>;
+}
+
+export interface SurveyRecord {
+  id: ID_Output;
+  htmlId: String;
+  openid: String;
+  questionSelected: Json;
+  createdAt: DateTimeOutput;
+  updatedAt: DateTimeOutput;
+  deletedAt?: String;
+}
+
+export interface SurveyRecordPromise
+  extends Promise<SurveyRecord>,
+    Fragmentable {
+  id: () => Promise<ID_Output>;
+  htmlId: () => Promise<String>;
+  openid: () => Promise<String>;
+  questionSelected: () => Promise<Json>;
+  createdAt: () => Promise<DateTimeOutput>;
+  updatedAt: () => Promise<DateTimeOutput>;
+  deletedAt: () => Promise<String>;
+}
+
+export interface SurveyRecordSubscription
+  extends Promise<AsyncIterator<SurveyRecord>>,
+    Fragmentable {
+  id: () => Promise<AsyncIterator<ID_Output>>;
+  htmlId: () => Promise<AsyncIterator<String>>;
+  openid: () => Promise<AsyncIterator<String>>;
+  questionSelected: () => Promise<AsyncIterator<Json>>;
+  createdAt: () => Promise<AsyncIterator<DateTimeOutput>>;
+  updatedAt: () => Promise<AsyncIterator<DateTimeOutput>>;
+  deletedAt: () => Promise<AsyncIterator<String>>;
+}
+
+export interface SurveyRecordEdge {
+  node: SurveyRecord;
+  cursor: String;
+}
+
+export interface SurveyRecordEdgePromise
+  extends Promise<SurveyRecordEdge>,
+    Fragmentable {
+  node: <T = SurveyRecordPromise>() => T;
+  cursor: () => Promise<String>;
+}
+
+export interface SurveyRecordEdgeSubscription
+  extends Promise<AsyncIterator<SurveyRecordEdge>>,
+    Fragmentable {
+  node: <T = SurveyRecordSubscription>() => T;
+  cursor: () => Promise<AsyncIterator<String>>;
+}
 
 /*
 DateTime scalar input type, allowing Date
@@ -1262,12 +1249,25 @@ The `Int` scalar type represents non-fractional signed whole numeric values. Int
 */
 export type Int = number;
 
+export type Long = string;
+
 /*
 The `Boolean` scalar type represents `true` or `false`.
 */
 export type Boolean = boolean;
 
-export type Long = string;
+/*
+The `ID` scalar type represents a unique identifier, often used to refetch an object or as key for a cache. The ID type appears in a JSON response as a String; however, it is not intended to be human-readable. When expected as an input type, any string (such as `"4"`) or integer (such as `4`) input value will be accepted as an ID.
+*/
+export type ID_Input = string | number;
+export type ID_Output = string;
+
+export type Json = any;
+
+/*
+The `String` scalar type represents textual data, represented as UTF-8 character sequences. The String type is most often used by GraphQL to represent free-form human-readable text.
+*/
+export type String = string;
 
 /**
  * Model Metadata

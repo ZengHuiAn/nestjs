@@ -14,5 +14,8 @@
     "arrow-parens": false,
     "object-literal-sort-keys": false
   },
+  "import-name": [true, {
+    "axios": "Axios"
+  }],
   "rulesDirectory": []
 }
