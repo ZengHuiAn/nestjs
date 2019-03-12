@@ -3,11 +3,8 @@
   "trailingComma": "all",  
   "useTabs": false,
   "tabWidth": 4,
-  "tabs":true,
   "semi": true,
   "jsxBracketSameLine": false,
-  "semicolons":false,
-  "Quotes":false,
   "bracketSpacing": true,
   "arrowParens": "avoid",
   "rangeStart": 0

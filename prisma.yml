@@ -1,0 +1,11 @@
+endpoint: http://localhost:3200
+datamodel: datamodel.prisma
+# 密码用于创建JSON Web Token(JWTs)。这些令牌需要在Prisma的endpoint发出的HTTP请求加上'Authorization'头。
+secret: casio-colorcat-apisecret
+generate:
+  - generator: typescript-client
+    output: ./generated/prisma-client/
+
+hooks:
+  post-deploy:
+    - prisma generate

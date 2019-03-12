@@ -1,11 +1,11 @@
 import { NestFactory } from '@nestjs/core';
 import { AppModule } from './app.module';
-
-import Axios from 'axios';
+import { Logger } from '@nestjs/common';
+import {config} from 'dotenv';
+const port = process.env.PORT || 8080;
 async function bootstrap() {
-
-  const server = Axios({});
-  const app = await NestFactory.create(AppModule, server);
-  await app.listen(3000);
+  const app = await NestFactory.create(AppModule);
+  await app.listen(port);
+  Logger.log(`listen port ${port} hostname:`);
 }
 bootstrap();
