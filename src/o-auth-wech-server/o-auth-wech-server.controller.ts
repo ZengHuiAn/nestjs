@@ -8,6 +8,6 @@ export class OAuthWechServerController {
 
     @Get()
     confirmWeChat(@Query() query) {
-        return this.oAuthService.confirmWeChat(query)
+        return this.oAuthService.confirmWeChat(query);
     }
 }
